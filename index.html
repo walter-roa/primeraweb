@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión por RUT</title>
+</head>
+<body>
+  <body style="background-color: lightblue;">
+
+  <h1>Registro de personas</h1>
+
+  <form id="registroForm">
+    <input type="text" id="rut" placeholder="RUT" required><br><br>
+    <input type="text" id="nombre" placeholder="Nombre" required><br><br>
+    <input type="text" id="direccion" placeholder="Dirección"><br><br>
+    <input type="text" id="celular" placeholder="Celular"><br><br>
+    <input type="email" id="correo" placeholder="Correo"><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <hr>
+
+  <h2>Consultar por RUT</h2>
+  <input type="text" id="buscarRut" placeholder="Ingrese RUT">
+  <button id="btnBuscar">Buscar</button>
+  <button id="btnEliminar">Eliminar</button>
+  <button id="btnModificar">Modificar</button>
+
+  <div id="resultado"></div>
+
+  <hr>
+
+  <h2>Todos los registros</h2>
+  <button id="btnVerTodos">Ver todos</button>
+  <div id="todosRegistros"></div>
+
+  <script>
+    let registros = JSON.parse(localStorage.getItem("registros")) || [];
+
+    const form = document.getElementById("registroForm");
+    const resultado = document.getElementById("resultado");
+    const todosRegistros = document.getElementById("todosRegistros");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const rut = document.getElementById("rut").value.trim();
+      const nombre = document.getElementById("nombre").value.trim();
+      const direccion = document.getElementById("direccion").value.trim();
+      const celular = document.getElementById("celular").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+
+      if (registros.find(r => r.rut === rut)) {
+        alert("El RUT ya está registrado.");
+        return;
+      }
+
+      registros.push({ rut, nombre, direccion, celular, correo });
+      localStorage.setItem("registros", JSON.stringify(registros));
+      alert("Datos guardados.");
+      form.reset();
+      mostrarTodos();
+    });
+
+    document.getElementById("btnBuscar").addEventListener("click", function () {
+      const rut = document.getElementById("buscarRut").value.trim();
+      const persona = registros.find(r => r.rut === rut);
+      if (persona) {
+        resultado.innerHTML = `
+          <p><strong>Nombre:</strong> ${persona.nombre}</p>
+          <p><strong>Dirección:</strong> ${persona.direccion}</p>
+          <p><strong>Celular:</strong> ${persona.celular}</p>
+          <p><strong>Correo:</strong> ${persona.correo}</p>
+        `;
+      } else {
+        resultado.innerHTML = `<p style="color:red;">No encontrado.</p>`;
+      }
+    });
+
+    document.getElementById("btnEliminar").addEventListener("click", function () {
+      const rut = document.getElementById("buscarRut").value.trim();
+      const index = registros.findIndex(r => r.rut === rut);
+      if (index !== -1) {
+        if (confirm("¿Eliminar este registro?")) {
+          registros.splice(index, 1);
+          localStorage.setItem("registros", JSON.stringify(registros));
+          alert("Eliminado.");
+          resultado.innerHTML = "";
+          mostrarTodos();
+        }
+      } else {
+        alert("No encontrado.");
+      }
+    });
+
+    document.getElementById("btnModificar").addEventListener("click", function () {
+      const rut = document.getElementById("buscarRut").value.trim();
+      const persona = registros.find(r => r.rut === rut);
+      if (!persona) return alert("No encontrado.");
+
+      const nuevoNombre = prompt("Nuevo nombre:", persona.nombre);
+      const nuevaDireccion = prompt("Nueva dirección:", persona.direccion);
+      const nuevoCelular = prompt("Nuevo celular:", persona.celular);
+      const nuevoCorreo = prompt("Nuevo correo:", persona.correo);
+
+      if (nuevoNombre !== null) persona.nombre = nuevoNombre;
+      if (nuevaDireccion !== null) persona.direccion = nuevaDireccion;
+      if (nuevoCelular !== null) persona.celular = nuevoCelular;
+      if (nuevoCorreo !== null) persona.correo = nuevoCorreo;
+
+      localStorage.setItem("registros", JSON.stringify(registros));
+      alert("Registro actualizado.");
+      mostrarTodos();
+      resultado.innerHTML = "";
+    });
+
+    document.getElementById("btnVerTodos").addEventListener("click", mostrarTodos);
+
+    function mostrarTodos() {
+      if (registros.length === 0) {
+        todosRegistros.innerHTML = "<p>No hay registros aún.</p>";
+        return;
+      }
+      let html = "<ul>";
+      registros.forEach(p => {
+        html += `<li><strong>${p.rut}:</strong> ${p.nombre}, ${p.direccion}, ${p.celular}, ${p.correo}</li>`;
+      });
+      html += "</ul>";
+      todosRegistros.innerHTML = html;
+    }
+
+    mostrarTodos();
+  </script>
+</body>
+</html>
