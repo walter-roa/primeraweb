@@ -2,9 +2,66 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Agenda del mes</title>
+  <title>Agenda del Mes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0074D9, #7FDBFF);
+      color: #333;
+    }
+    nav {
+      background-color: #001f3f;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #0074D9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #0074D9;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="acerca.html">Acerca de</a>
@@ -13,7 +70,54 @@
     <a href="noticias.html">Noticias</a>
     <a href="comentarios.html">Déjame tu comentario</a>
   </nav>
-  <h1>Agenda del mes</h1>
-  <p>Aquí irá la agenda mensual de actividades.</p>
+
+  <div class="container">
+    <h1>Agenda del Mes</h1>
+    <p>Aquí encontrarás las actividades más relevantes para nuestra comunidad. Esta agenda es actualizada mensualmente para mantenerte informado.</p>
+    
+    <table>
+      <caption>Actividades Destacadas - Junio 2025</caption>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Actividad</th>
+          <th>Lugar</th>
+          <th>Organiza</th>
+          <th>Participantes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20 de junio</td>
+          <td>Operativo de salud rural</td>
+          <td>Sede El Caracol</td>
+          <td>CESFAM Bulnes</td>
+          <td>Vecinos del sector</td>
+        </tr>
+        <tr>
+          <td>22 de junio</td>
+          <td>Encuentro deportivo infantil</td>
+          <td>Estadio Municipal</td>
+          <td>Club Marcopolo</td>
+          <td>Niños y apoderados</td>
+        </tr>
+        <tr>
+          <td>28 de junio</td>
+          <td>Reunión Comité de Vivienda</td>
+          <td>Sede Sta. Rosa</td>
+          <td>Dirigencia local</td>
+          <td>Socios inscritos</td>
+        </tr>
+        <tr>
+          <td>30 de junio</td>
+          <td>Fiesta de San Pedro</td>
+          <td>Plaza de Armas</td>
+          <td>Junta de Vecinos + Parroquia</td>
+          <td>Comunidad en general</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </body>
 </html>
