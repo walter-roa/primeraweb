@@ -2,19 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>VOCES DEL BARRIO</title>
+  <title>Voces del Barrio - Inicio</title>
   <style>
     body {
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #001f3f, #0074D9);
+      color: #f1f1f1;
     }
     nav {
-      background-color: #333;
-      padding: 10px;
+      background-color: #003366;
+      padding: 15px;
       text-align: center;
-      margin-bottom: 30px;
     }
     nav a {
       color: white;
@@ -24,6 +23,43 @@
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #ffffff;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    a.btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #ffffff;
+      color: #001f3f;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -38,14 +74,45 @@
     <a href="comentarios.html">Déjame tu comentario</a>
   </nav>
 
-  <h1>VOCES DEL BARRIO</h1>
-  <h2>En Construcción</h2>
-<img src="walter.jpg" style="
-  width: 300px;
-  height: 200px;
-  border-radius: 50% / 30%;
-  transform: rotate(-10deg);
-">
-<p>Pronto estaremos para ayudarte</p>
+  <div class="container">
+
+    <h1>Bienvenidos a Voces del Barrio</h1>
+    <p style="text-align: center;">Un espacio comunitario creado para compartir información, fortalecer la participación y trabajar juntos por una mejor comuna.</p>
+
+    <div class="section">
+      <h2>Próximas Actividades</h2>
+      <ul>
+        <li><strong>20 junio:</strong> Operativo de salud – Sede El Caracol</li>
+        <li><strong>22 junio:</strong> Encuentro deportivo infantil – Estadio Municipal</li>
+      </ul>
+      <a href="agenda.html" class="btn">Ver agenda completa</a>
+    </div>
+
+    <div class="section">
+      <h2>Últimas Noticias</h2>
+      <ul>
+        <li><strong>Nuevo comité de vivienda conformado en Sta. Rosa</strong> – Más de 40 familias se suman.</li>
+        <li><strong>Exitosa jornada de limpieza en el sector norte</strong> – Participaron más de 60 vecinos.</li>
+      </ul>
+      <a href="noticias.html" class="btn">Ver todas las noticias</a>
+    </div>
+
+    <div class="section">
+      <h2>¿Sabías que...?</h2>
+      <p>🔌 Puedes reportar cortes eléctricos directamente en la SEC llamando al 600 6000 732 o ingresando a <a href="https://www.sec.cl" style="color: #FFD700;">www.sec.cl</a>.</p>
+      <p>📬 También puedes solicitar poda preventiva del tendido eléctrico si notas ramas en contacto con cables.</p>
+      <a href="sabiasque.html" class="btn">Ver más datos útiles</a>
+    </div>
+
+    <div class="section">
+      <h2>Déjanos tu comentario</h2>
+      <p>¿Tienes una idea o una inquietud sobre tu sector? Este espacio es para ti. Escríbenos, te escuchamos.</p>
+      <a href="comentarios.html" class="btn">Ir al formulario</a>
+    </div>
+
+    <p class="quote">"Contigo, todos los días" <br> — Walter Roa</p>
+
+  </div>
+
 </body>
 </html>
