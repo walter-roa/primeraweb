@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Título de la Página</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilo general */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #003366; /* Azul de fondo principal */
+      color: white;
+    }
 
+    /* Banner superior */
+    header {
+      background-color: #002244;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Barra de navegación */
+    nav {
+      background-color: #cceeff; /* Celeste claro */
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      background-color: #0059b3; /* Azul botón */
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Contenido principal */
+    .contenido {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #002244;
+      color: #ccc;
+      margin-top: 40px;
+    }
+
+    /* Enlaces de descarga */
+    .descargas a {
+      display: block;
+      margin: 10px 0;
+      color: #aaddff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <header>
+    Voces del Barrio - Junta de Vecinos Santa Rosa
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="descargas.html">Descargas</a>
+    <a href="galeria.html">Galería</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <h1>Título de esta página</h1>
+    <p>Aquí puedes escribir el contenido de esta página o insertar módulos específicos.</p>
+
+    <!-- Ejemplo: sección de descargas -->
+    <div class="descargas">
+      <h2>📄 Documentos para Descargar</h2>
+      <a href="documentos/acta-marzo.pdf" download>📝 Acta Asamblea Marzo 2025</a>
+      <a href="documentos/formulario-postulacion.pdf" download>📋 Formulario Postulación</a>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    © 2025 Junta de Vecinos Santa Rosa - Bulnes | Sitio desarrollado por Walter Roa
+  </footer>
+
+</body>
+</html>
