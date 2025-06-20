@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú con Flechas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1b2a;
+      color: white;
+    }
+
+    nav {
+      background-color: #b3e5fc; /* celeste claro */
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      gap: 15px;
+    }
+
+    nav a {
+      background-color: #007BFF; /* azul */
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    nav a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Para íconos Font Awesome */
+    .fa {
+      font-size: 18px;
+    }
+
+    /* Para el botón de flecha Unicode */
+    .unicode-flecha {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- Botón clásico -->
+    <a href="index.html">Inicio</a>
+
+    <!-- Versión 1: Unicode -->
+    <a href="contenido.html" title="Volver a contenido">
+      <span class="unicode-flecha">⬅️</span> Volver
+    </a>
+
+    <!-- Versión 2: Font Awesome clásica -->
+    <a href="contenido.html" title="Volver a contenido">
+      <i class="fas fa-arrow-left"></i> Volver
+    </a>
+
+    <!-- Versión 3: Font Awesome circular -->
+    <a href="contenido.html" title="Volver a contenido">
+      <i class="fas fa-arrow-circle-left"></i> Volver
+    </a>
+
+    <!-- Botón final -->
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+</body>
+</html>
 
