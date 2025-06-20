@@ -2,66 +2,116 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Acerca de Walter Roa</title>
+  <title>Acerca de Voces del Barrio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f9f9f9;
-      line-height: 1.6;
+      background-color: #004080; /* azul de fondo */
+      margin: 0;
+      padding: 0;
     }
+
     nav {
-      background-color: #333;
-      padding: 10px;
+      background-color: #cce7ff; /* celeste claro */
+      padding: 15px;
       text-align: center;
     }
+
     nav a {
+      display: inline-block;
+      background-color: #007bff; /* azul fuerte */
       color: white;
-      margin: 0 15px;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      transition: all 0.3s ease;
     }
+
+    nav a i {
+      margin-right: 8px;
+    }
+
     nav a:hover {
-      text-decoration: underline;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
+
     .container {
-      max-width: 800px;
-      margin: auto;
+      max-width: 1000px;
       background: white;
+      margin: 30px auto;
       padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
     }
+
+    .texto {
+      flex: 1 1 60%;
+      color: #000;
+    }
+
+    .imagenes {
+      flex: 1 1 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .imagenes img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
     h1 {
-      color: #444;
+      margin-top: 0;
+      color: #004080;
     }
   </style>
 </head>
 <body>
- <img src="Banner.jpg" alt="Banner Voces del Barrio" style="width: 100%; max-height: 200px; object-fit: cover;">
+
+  <img src="Banner.jpg" alt="Banner Voces del Barrio" style="width: 100%; max-height: 200px; object-fit: cover;">
+
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="acerca.html">Acerca de</a>
-    <a href="agenda.html">Agenda del mes</a>
-    <a href="sabiasque.html">¿Sabías que?</a>
-    <a href="noticias.html">Noticias</a>
-    <a href="comentarios.html">Déjame tu comentario</a>
+    <a href="index.html"><i class="fas fa-home"></i> Ir al Inicio</a>
+    <a href="acerca.html"><i class="fas fa-users"></i> Acerca de Voces del Barrio</a>
+    <a href="creador.html"><i class="fas fa-user"></i> Acerca del Creador</a>
   </nav>
 
   <div class="container">
-    <h1>Acerca de Walter Roa</h1>
-    
-    <p>Soy Walter Roa, vecino de Bulnes, profesor de vocación, dirigente social y servidor de la comunidad. Nací en esta tierra el 4 de abril de 1968, hijo de María y René, y desde pequeño aprendí el valor del compromiso, la honestidad y el trabajo colectivo.</p>
-
-    <p>He dedicado más de 30 años a la educación, formando a generaciones de jóvenes en el Liceo Manuel Bulnes, el Liceo Santa Cruz, escuelas rurales y la Escuela Especial de Bulnes. Como profesor técnico profesional en computación y especialista en educación tecnológica y ambiental, siempre he creído que el aprendizaje debe tener un impacto directo en la vida de las personas y su entorno.</p>
-
-    <p>Mi vocación de servicio también se ha desarrollado como dirigente scout, bombero, presidente de junta de vecinos, técnico deportivo y líder comunitario. He impulsado proyectos juveniles, culturales, medioambientales y habitacionales que han beneficiado a cientos de familias de la comuna.</p>
-
-    <p>Este sitio web —<strong>Voces del Barrio</strong>— nace de esa misma convicción: crear un espacio de encuentro, información y participación ciudadana donde podamos compartir lo que ocurre en nuestros sectores, proponer ideas, visibilizar problemas y construir soluciones juntos.</p>
-
-    <p>Estoy aquí para escucharte, apoyarte y seguir caminando contigo todos los días. Porque creo que un mejor Bulnes y una mejor región de Ñuble se construyen desde abajo, desde el barrio, desde la gente.</p>
-
-    <p><em>Contigo, todos los días.</em></p>
+    <div class="texto">
+      <h1>Acerca de Voces del Barrio</h1>
+      <p><strong>Voces del Barrio</strong> es un espacio comunitario pensado para visibilizar, informar y fortalecer el tejido social de nuestros sectores. Nace desde la necesidad de tener una plataforma que represente la realidad de los vecinos y vecinas, que impulse la participación ciudadana y dé voz a los temas que nos importan.</p>
+      <p>Este sitio busca ser un punto de encuentro para compartir noticias, propuestas, experiencias y actividades que surgen desde nuestras propias organizaciones sociales y líderes comunitarios. Creemos en la colaboración, la solidaridad y la fuerza de nuestras historias.</p>
+      <p>Queremos que esta plataforma crezca con tu participación, con tus ideas, tus aportes y tu mirada del territorio.</p>
+      <p><em>¡Porque en el barrio nacen las mejores soluciones!</em></p>
+    </div>
+    <div class="imagenes">
+      <img src="foto1.jpg" alt="Organización social 1">
+      <img src="foto2.jpg" alt="Organización social 2">
+      <img src="foto3.jpg" alt="Organización social 3">
+    </div>
   </div>
+
+  <footer>
+    © 2025 Voces del Barrio | Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
+
