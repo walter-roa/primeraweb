@@ -4,6 +4,35 @@
   <meta charset="UTF-8">
   <title>Voces del Barrio - Inicio</title>
   <style>
+     .menu-lateral {
+        position: fixed;
+        top: 100px;
+        left: 0; /* Cambia a 'right: 0' si lo quieres al otro lado */
+        background-color: #003366;
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+     }
+
+    .menu-lateral a {
+        display: block;
+       color: white;
+       text-decoration: none;
+       padding: 10px 15px;
+       margin: 5px 0;
+       background-color: #007BFF;
+       border-radius: 5px;
+       font-weight: bold;
+       text-align: center;
+       transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .menu-lateral a:hover {
+        background-color: #0056b3;
+        transform: translateX(5px);
+     }
+    
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -93,6 +122,16 @@
 </head>
 <body>
   <img src="Banner.jpg" alt="Banner Voces del Barrio" style="width: 100%; max-height: 200px; object-fit: cover;">
+<div class="menu-lateral">
+  <a href="https://www.fondos.gob.cl/" target="_blank">Fondos del Estado</a>
+  <a href="https://www.registrocivil.cl/" target="_blank">Registro Civil</a>
+  <a href="https://www.gob.cl/tramites/" target="_blank">Trámites Gob.cl</a>
+  <a href="https://goredenuble.cl/" target="_blank">GORE Ñuble</a>
+  <a href="https://www.mineduc.cl/" target="_blank">MINEDUC</a>
+</div>
+
+
+  
   <nav>
     <a href="index.html">Inicio</a>
     <a href="acerca.html">Acerca de</a>
