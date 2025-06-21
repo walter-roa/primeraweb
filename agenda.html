@@ -25,13 +25,19 @@
     nav a:hover {
       text-decoration: underline;
     }
+
     .container {
       max-width: 900px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       margin: 40px auto;
-      background: white;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      box-shadow: 0 4 10px rgba(0,0,0,0.2);
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
     }
     h1 {
       text-align: center;
