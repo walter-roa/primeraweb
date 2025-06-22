@@ -26,6 +26,26 @@
       text-decoration: underline;
     }
 
+.boton-levita {
+  background-color: #007BFF; /* azul brillante */
+  color: #fff; /* texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* esquinas redondeadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none; /* si es un enlace */
+  display: inline-block;
+}
+
+.boton-levita:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* sombra más intensa al pasar el mouse */
+}
+
+    
     .container {
       max-width: 1000px;
       background: rgba(255, 255, 255, 0.1);
@@ -76,6 +96,7 @@
 </head>
 <body>
 <img src="Banner_Agenda_Mes.jpg" alt="Banner Voces del Barrio" style="width: 100%; max-height: 200px; object-fit: cover;">
+  <button class="boton-levita">Haz clic aquí</button>
   <nav>
     <a href="index.html" class="boton">
       <i class="fas fa-home"></i> Ir a Inicio
