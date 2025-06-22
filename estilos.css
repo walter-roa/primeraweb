@@ -45,7 +45,7 @@
 /* --- Imagen lateral del index --- */
 .podcast-link {
   position: absolute;
-  top: 400px;
+  top: 350px;
   left: 30px;
   z-index: 1000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -65,7 +65,7 @@
 /* --- Imagen lateral del index con efecto levitación --- */
 .podcast-link {
   position: absolute;
-  top: 400px; /* ajusta según tu diseño */
+  top: 350px; /* ajusta según tu diseño */
   left: 30px;
   z-index: 1000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
