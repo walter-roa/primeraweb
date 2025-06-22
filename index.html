@@ -3,77 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>Voces del Barrio - Inicio</title>
+  <link rel="stylesheet" href="estilos.css">
   <style>
-     .menu-lateral {
-        position: fixed;
-        top: 320px;
-        right: 0; /* Cambia a 'right: 0' si lo quieres al otro lado */
-        background-color: #003366;
-        padding: 10px;
-        border-radius: 0 10px 10px 0;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-        z-index: 1000;
-     }
+    .menu-lateral {
+      position: fixed;
+      top: 320px;
+      right: 0;
+      background-color: #003366;
+      padding: 10px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
 
     .menu-lateral a {
-       display: block;
-       color: white;
-       text-decoration: none;
-       padding: 10px 15px;
-       margin: 5px 0;
-       background-color: #007BFF;
-       border-radius: 5px;
-       font-weight: bold;
-       text-align: center;
-       transition: background-color 0.3s, transform 0.2s;
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 5px 0;
+      background-color: #007BFF;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     .menu-lateral a:hover {
-        background-color: #0056b3;
-        transform: translateX(5px);
-     }
-    
+      background-color: #0056b3;
+      transform: translateX(5px);
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #001f3f, #0074D9);
       color: #FFFFFF;
     }
-    nav {
-      background-color: #87CEFA;
-      padding: 15px;
-      text-align: center;
-    }
+
+    /* Eliminamos estilos antiguos de nav y banner para dejar los fijos */
     nav a {
-      color: #001f3f;
-      margin: 0 15px;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
       text-decoration: none;
+      border-radius: 5px;
       font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background-color: #0056b3;
+      transform: translateY(-2px);
+      box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
     }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 10px;
-    }
+
     h1, h2 {
       text-align: center;
       color: #ffffff;
     }
+
     ul {
       list-style-type: none;
       padding-left: 0;
     }
+
     li {
       margin: 10px 0;
     }
-    .section {
-      margin-bottom: 40px;
-    }
+
     a.btn {
       display: inline-block;
       margin-top: 10px;
@@ -84,46 +84,72 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .quote {
       font-style: italic;
       text-align: center;
       margin-top: 40px;
       font-size: 1.2em;
     }
-      .section {
+
+    /* Agrega estos estilos específicos aquí o déjalos en estilos.css */
+    .banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to right, #004080, #0074D9);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .contenido-scroll {
+      margin-top: 160px;
+      padding: 20px;
+      height: calc(100vh - 160px);
+      overflow-y: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .section {
       background: rgba(255, 255, 255, 0.1);
       padding: 25px;
       border-radius: 10px;
       margin-bottom: 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-    nav {
-       background-color: #87CEFA; /* fondo del menú */
-       padding: 10px 0;
-       text-align: center;
-    }
-  nav a {
-     background-color: #007BFF; /* fondo azul del botón */
-     color: white;
-     padding: 10px 20px;
-     margin: 5px;
-     text-decoration: none;
-     border-radius: 5px;
-     font-weight: bold;
-     display: inline-block;
-     transition: background-color 0.3s;
-   }
-  nav a:hover {
-    background-color: #0056b3; /* azul más oscuro al pasar el mouse */
-    transform: translateY(-2px); /* efecto de levantar */
-    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4); /* sombra más intensa */
-  }
-</style>
-<link rel="stylesheet" href="estilos.css">
+  </style>
 </head>
 <body>
-  <img src="Banner.jpg" alt="Banner Voces del Barrio" style="width: 100%; max-height: 200px; object-fit: cover;">
-  <nav>
+
+  <!-- Banner fijo -->
+  <header class="banner">
+    <h1>Voces del Barrio</h1>
+    <p>Construyendo comunidad desde nuestras historias</p>
+  </header>
+
+  <!-- Navegación fija -->
+  <nav class="navbar">
     <a href="index.html">Inicio</a>
     <a href="acerca.html">Acerca de</a>
     <a href="agenda.html">Agenda del mes</a>
@@ -132,12 +158,13 @@
     <a href="noticias.html">Noticias</a>
     <a href="comentarios.html">Déjame tu comentario</a>
   </nav>
-  
-  <!-- Enlace visual a la sección Podcast -->
+
+  <!-- Enlace visual a podcast -->
   <a href="podcast.html" class="podcast-link">
-     <img src="ImagenesPodcast/Banner_Enlace_Podcast.png" alt="Ir al Podcast Voces del Barrio" class="podcast-img">
+    <img src="ImagenesPodcast/Banner_Enlace_Podcast.png" alt="Ir al Podcast Voces del Barrio" class="podcast-img">
   </a>
 
+  <!-- Menú lateral derecho -->
   <div class="menu-lateral">
     <a href="https://www.fondos.gob.cl/" target="_blank">Fondos del Estado</a>
     <a href="https://www.registrocivil.cl/" target="_blank">Registro Civil</a>
@@ -145,45 +172,44 @@
     <a href="https://goredenuble.cl/" target="_blank">GORE Ñuble</a>
     <a href="https://www.mineduc.cl/" target="_blank">MINEDUC</a>
   </div>
-  <div class="container">
 
-    <h1>Bienvenidos a Voces del Barrio</h1>
-    <p style="text-align: center;">Un espacio comunitario creado para compartir información, fortalecer la participación y trabajar juntos por una mejor comuna.</p>
+  <!-- Contenido desplazable -->
+  <main class="contenido-scroll">
+    <div class="container">
+      <div class="section">
+        <h2>Próximas Actividades</h2>
+        <ul>
+          <li><strong>20 junio:</strong> Operativo de salud – Sede El Caracol</li>
+          <li><strong>22 junio:</strong> Encuentro deportivo infantil – Estadio Municipal</li>
+        </ul>
+        <a href="agenda.html" class="btn">Ver agenda completa</a>
+      </div>
 
-    <div class="section">
-      <h2>Próximas Actividades</h2>
-      <ul>
-        <li><strong>20 junio:</strong> Operativo de salud – Sede El Caracol</li>
-        <li><strong>22 junio:</strong> Encuentro deportivo infantil – Estadio Municipal</li>
-      </ul>
-      <a href="agenda.html" class="btn">Ver agenda completa</a>
+      <div class="section">
+        <h2>Últimas Noticias</h2>
+        <ul>
+          <li><strong>Nuevo comité de vivienda conformado en Sta. Rosa</strong> – Más de 40 familias se suman.</li>
+          <li><strong>Exitosa jornada de limpieza en el sector norte</strong> – Participaron más de 60 vecinos.</li>
+        </ul>
+        <a href="noticias.html" class="btn">Ver todas las noticias</a>
+      </div>
+
+      <div class="section">
+        <h2>¿Sabías que...?</h2>
+        <p>🔌 Puedes reportar cortes eléctricos directamente en la SEC llamando al 600 6000 732 o ingresando a <a href="https://www.sec.cl" style="color: #FFD700;">www.sec.cl</a>.</p>
+        <p>📬 También puedes solicitar poda preventiva del tendido eléctrico si notas ramas en contacto con cables.</p>
+        <a href="sabiasque.html" class="btn">Ver más datos útiles</a>
+      </div>
+
+      <div class="section">
+        <h2>Déjanos tu comentario</h2>
+        <p>¿Tienes una idea o una inquietud sobre tu sector? Este espacio es para ti. Escríbenos, te escuchamos.</p>
+        <a href="comentarios.html" class="btn">Ir al formulario</a>
+      </div>
+
+      <p class="quote">"Contigo, todos los días" <br> — Walter Roa</p>
     </div>
-
-    <div class="section">
-      <h2>Últimas Noticias</h2>
-      <ul>
-        <li><strong>Nuevo comité de vivienda conformado en Sta. Rosa</strong> – Más de 40 familias se suman.</li>
-        <li><strong>Exitosa jornada de limpieza en el sector norte</strong> – Participaron más de 60 vecinos.</li>
-      </ul>
-      <a href="noticias.html" class="btn">Ver todas las noticias</a>
-    </div>
-
-    <div class="section">
-      <h2>¿Sabías que...?</h2>
-      <p>🔌 Puedes reportar cortes eléctricos directamente en la SEC llamando al 600 6000 732 o ingresando a <a href="https://www.sec.cl" style="color: #FFD700;">www.sec.cl</a>.</p>
-      <p>📬 También puedes solicitar poda preventiva del tendido eléctrico si notas ramas en contacto con cables.</p>
-      <a href="sabiasque.html" class="btn">Ver más datos útiles</a>
-    </div>
-
-    <div class="section">
-      <h2>Déjanos tu comentario</h2>
-      <p>¿Tienes una idea o una inquietud sobre tu sector? Este espacio es para ti. Escríbenos, te escuchamos.</p>
-      <a href="comentarios.html" class="btn">Ir al formulario</a>
-    </div>
-
-    <p class="quote">"Contigo, todos los días" <br> — Walter Roa</p>
-
-  </div>
+  </main>
 
 </body>
 </html>
