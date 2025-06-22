@@ -88,7 +88,7 @@
 /* --- Barra de navegación fija debajo del banner --- */
 .navbar {
   position: fixed;
-  top: 80px; /* depende del alto del banner */
+  top: 200px; /* depende del alto del banner */
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -97,9 +97,9 @@
 
 /* --- Contenido que hace scroll debajo del banner y nav --- */
 .contenido-scroll {
-  margin-top: 160px; /* banner + nav */
+  margin-top: 220px; /* banner + nav */
   padding: 20px;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 220px);
   overflow-y: auto;
 }
 
@@ -109,7 +109,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px; /* ajusta según la altura de tu imagen */
+  height: 200px; /* ajusta según la altura de tu imagen */
   z-index: 1000;
   overflow: hidden; /* para que no desborde */
 }
