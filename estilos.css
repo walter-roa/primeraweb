@@ -42,15 +42,6 @@
   color: #ddd;
 }
 
-/* --- Imagen lateral del index --- */
-.podcast-link {
-  position: absolute;
-  top: 350px;
-  left: 30px;
-  z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .podcast-img {
   width: 150px;
   border-radius: 10px;
@@ -64,8 +55,8 @@
 
 /* --- Imagen lateral del index con efecto levitación --- */
 .podcast-link {
-  position: absolute;
-  top: 350px; /* ajusta según tu diseño */
+  position: fixed; /* Fija la imagen */
+  top: 320px; /* ajusta según tu diseño */
   left: 30px;
   z-index: 1000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
