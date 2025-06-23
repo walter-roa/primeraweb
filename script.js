@@ -1,8 +1,8 @@
 function mostrarSabias(id) {
-  const container = document.getElementById("sabiasContainer");
+ const contenido = document.getElementById("sabiasContenido");
 
   if (id === "sabias1") {
-    container.innerHTML = `
+    contenido.innerHTML = `
       <h2>Organizaciones Sociales</h2>
       <p>¿Sabías que una organización territorial puede postular a fondos del Estado si está regularizada en la municipalidad y tiene personalidad jurídica vigente?</p>
       <div style="display: flex; gap: 10px;">
