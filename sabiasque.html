@@ -2,18 +2,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>¿Sabías que?</title>
+  <title>Sabías que</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="acerca.html">Acerca de</a>
-    <a href="agenda.html">Agenda del mes</a>
-    <a href="sabiasque.html">¿Sabías que?</a>
-    <a href="noticias.html">Noticias</a>
-    <a href="comentarios.html">Déjame tu comentario</a>
+
+  <!-- Banner superior -->
+  <header class="banner">
+    <h1>Sabías que...</h1>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <button onclick="location.href='index.html'"><i class="icon-home"></i> Inicio</button>
+    <button onclick="filtrarCategoria('organizaciones')">Organizaciones Sociales</button>
+    <button onclick="filtrarCategoria('dirigencia')">Dirigencia y Liderazgo</button>
+    <button onclick="filtrarCategoria('participacion')">Participación Ciudadana</button>
   </nav>
-  <h1>¿Sabías que?</h1>
-  <p>Datos interesantes, consejos y más.</p>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <!-- Columna de miniaturas -->
+    <aside class="miniaturas">
+      <img src="img/sabias1.jpg" class="miniatura" onclick="mostrarSabias('sabias1')">
+      <img src="img/sabias2.jpg" class="miniatura" onclick="mostrarSabias('sabias2')">
+      <img src="img/sabias3.jpg" class="miniatura" onclick="mostrarSabias('sabias3')">
+    </aside>
+
+    <!-- Contenedor dinámico del contenido -->
+    <section id="sabiasContainer" class="sabias-container">
+      <p>Haz clic en una imagen para ver el contenido.</p>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Voces del Barrio - Walter Roa</p>
+  </footer>
+
 </body>
 </html>
