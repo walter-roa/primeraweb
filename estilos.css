@@ -72,18 +72,24 @@
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-/* --- Banner fijo --- */
 .banner {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to right, #004080, #0074D9);
+  height: 200px; /* Altura del banner, ajustable */
+  background: linear-gradient(to right, #004080, #0074D9); /* O usa background-image */
   color: white;
   text-align: center;
   padding: 20px 0;
+  font-size: 2rem;
   z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* --- Barra de navegación fija debajo del banner --- */
 .navbar {
@@ -104,15 +110,6 @@
 }
 
 
-.banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px; /* ajusta según la altura de tu imagen */
-  z-index: 1000;
-  overflow: hidden; /* para que no desborde */
-}
 
 .banner img {
   width: 100%;
@@ -129,15 +126,6 @@
   height: 500px; /* ajusta según necesidad */
   overflow-y: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* Banner superior */
-.banner {
-  background-color: #001f3f;
-  text-align: center;
-  padding: 20px;
-  font-size: 2rem;
-  color: white;
 }
 
 /* Barra de navegación */
