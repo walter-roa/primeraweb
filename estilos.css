@@ -1,4 +1,125 @@
-/* --- Estilos de Podcast --- */
+/* === ESTILO GENERAL DEL SITIO === */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, #001f3f, #0074D9);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+/* === BANNER SUPERIOR === */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to right, #004080, #0074D9);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === BARRA DE NAVEGACIÓN === */
+.navbar {
+  position: fixed;
+  top: 200px; /* debajo del banner */
+  left: 0;
+  width: 100%;
+  background-color: #cceeff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  border-radius: 0 0 12px 12px;
+}
+
+.navbar button {
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* === CONTENIDO GENERAL QUE VA DEBAJO DEL BANNER Y NAV === */
+.contenido {
+  display: flex;
+  margin-top: 260px;
+  gap: 20px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+
+/* === MINIATURAS A LA IZQUIERDA === */
+.miniaturas {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.miniatura {
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.miniatura:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* === CONTENEDOR DINÁMICO DERECHA === */
+.sabias-container {
+  width: 75%;
+  margin-left: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: white;
+  backdrop-filter: blur(6px);
+}
+
+.sabias-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* === PIE DE PÁGINA === */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #001f3f;
+  margin-top: 40px;
+}
+
+/* === SECCIÓN DE PODCASTS (index.html) === */
 #podcast.section.container {
   max-width: 1000px;
   margin: 40px auto;
@@ -48,160 +169,15 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.podcast-link:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* --- Imagen lateral del index con efecto levitación --- */
 .podcast-link {
-  position: fixed; /* Fija la imagen */
-  top: 320px; /* ajusta según tu diseño */
+  position: fixed;
+  top: 320px;
   left: 30px;
   z-index: 1000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.podcast-img {
-  width: 150px; /* ajusta el tamaño a gusto */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
 .podcast-link:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-.banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px; /* Altura del banner, ajustable */
-  background: linear-gradient(to right, #004080, #0074D9); /* O usa background-image */
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 2rem;
-  z-index: 1000;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Barra de navegación fija debajo del banner */
-.navbar {
-  position: fixed;
-  top: 200px; /* depende del alto del banner */
-  left: 0;
-  width: 100%;
-  background-color: #cceeff; /* celeste claro */
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  border-radius: 0 0 12px 12px;
-}
-
-/* --- Contenido que hace scroll debajo del banner y nav --- */
-.contenido-scroll {
-  margin-top: 250px; /* banner + nav */
-  padding: 20px;
-  height: calc(100vh - 220px);
-  overflow-y: auto;
-}
-
-
-
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* para que la imagen cubra todo sin deformarse */
-}
-
-.container-scroll {
-  max-width: 900px;
-  margin: 30px auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 10px;
-  height: 500px; /* ajusta según necesidad */
-  overflow-y: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.navbar button {
-  background-color: #0074D9;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.navbar button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-/* Contenido principal */
-
-.contenido {
-  display: flex;
-  margin-top: 260px;
-  gap: 20px;
-  padding: 20px;
-  backdrop-filter: blur(6px);
-}
-
-/* Miniaturas (columna izquierda) */
-.miniaturas {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-start;
-}
-
-.miniatura {
-  width: 100px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.miniatura:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-/* Contenedor de contenido dinámico */
-.sabias-container {
-  width: 75%;
-  margin-left: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-top: 240px;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  color: blue;
-}
-
-/* Pie de página */
-.footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #001f3f;
-  margin-top: 40px;
-}
-.sabias-container h1 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
