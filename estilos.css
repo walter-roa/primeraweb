@@ -149,9 +149,11 @@
 }
 
 /* Contenido principal */
+
 .contenido {
   display: flex;
   margin-top: 260px;
+  gap: 20px;
   padding: 20px;
   backdrop-filter: blur(6px);
 }
@@ -182,7 +184,7 @@
   width: 75%;
   margin-left: 20px;
   background: rgba(255, 255, 255, 0.1);
-  margin-top: 260px;
+  margin-top: 240px;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
