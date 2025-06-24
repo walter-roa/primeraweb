@@ -62,13 +62,13 @@ body {
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* === CONTENIDO GENERAL QUE VA DEBAJO DEL BANNER Y NAV === */
-.contenido {
+/* === CONTENIDO GENERAL QUE VA DEBAJO DEL BANNER Y NAV === */.contenido {
   display: flex;
-  margin-top: 260px;
+  margin-top: 260px; /* espacio para banner + navbar */
   gap: 20px;
-  padding: 20px;
+  padding: 20px 40px 20px 40px; /* agrega padding izquierdo y derecho para separar del borde */
   backdrop-filter: blur(6px);
+  box-sizing: border-box; /* para que el padding no haga que el ancho se salga */
 }
 
 /* === MINIATURAS A LA IZQUIERDA === */
@@ -78,13 +78,8 @@ body {
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
-}
-
-.miniatura {
-  width: 100px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding-left: 10px;  /* para que no toque el borde */
+  box-sizing: border-box;
 }
 
 .miniatura:hover {
