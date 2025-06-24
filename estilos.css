@@ -60,7 +60,7 @@ html, body {
 /* .navbar {
   position: fixed;
   top: 200px; /* debajo del banner */
-  left: 0;
+ /* left: 0;
   width: 100%;
   background-color: #cceeff;
   display: flex;
