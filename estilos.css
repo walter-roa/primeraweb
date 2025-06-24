@@ -94,7 +94,7 @@
 /* --- Barra de navegación fija debajo del banner --- */
 .navbar {
   position: fixed;
-  top: 200px; /* depende del alto del banner */
+  top: 240px; /* depende del alto del banner */
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
