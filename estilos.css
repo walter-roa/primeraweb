@@ -131,19 +131,14 @@ html, body {
 }
 */
 .contenido {
-  position: fixed; /* para que quede fijo en pantalla */
-  top: 260px; /* banner (200px) + navbar (60px aprox) */
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: flex;
   gap: 20px;
   padding: 20px 40px;
+  height: calc(100vh - 260px); /* altura disponible debajo del banner y navbar */
+  overflow-y: auto;
   box-sizing: border-box;
   backdrop-filter: blur(6px);
-  /*overflow-y: auto; /* scroll vertical interno */
 }
-
 /* === MINIATURAS A LA IZQUIERDA === */
 /* .miniaturas {
   width: 20%;
