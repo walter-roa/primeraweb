@@ -141,7 +141,7 @@ html, body {
   padding: 20px 40px;
   box-sizing: border-box;
   backdrop-filter: blur(6px);
-  overflow-y: auto; /* scroll vertical interno */
+  /*overflow-y: auto; /* scroll vertical interno */
 }
 
 /* === MINIATURAS A LA IZQUIERDA === */
@@ -151,7 +151,7 @@ html, body {
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
-  padding-left: 10px;  /* para que no toque el borde */
+  padding-left: 10px;  /* para que no toque el borde 
   box-sizing: border-box;
 } */
 
