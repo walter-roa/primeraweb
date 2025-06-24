@@ -120,14 +120,14 @@ html, body {
 
 
 /* === CONTENIDO GENERAL QUE VA DEBAJO DEL BANNER Y NAV === */
-/*
-.contenido {
+
+/* .contenido {
   display: flex;
-  margin-top: 260px; /* espacio para banner + navbar */
+  margin-top: 260px; /* espacio para banner + navbar 
   gap: 20px;
-  padding: 20px 40px 20px 40px; /* agrega padding izquierdo y derecho para separar del borde */
+  padding: 20px 40px 20px 40px; /* agrega padding izquierdo y derecho para separar del borde 
   backdrop-filter: blur(6px);
-  box-sizing: border-box; /* para que el padding no haga que el ancho se salga */
+  box-sizing: border-box; /* para que el padding no haga que el ancho se salga 
 }
 */
 .contenido {
