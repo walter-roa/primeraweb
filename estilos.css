@@ -131,14 +131,15 @@ html, body {
 }
 */
 .contenido {
-  display: flex;
-  gap: 20px;
-  padding: 20px 40px;
-  height: calc(100vh - 260px); /* altura disponible debajo del banner y navbar */
-  overflow-y: auto;
-  box-sizing: border-box;
-  backdrop-filter: blur(6px);
+  display: flex !important;
+  gap: 20px !important;
+  padding: 20px 40px !important;
+  height: calc(100vh - 260px) !important; /* altura disponible debajo del banner y navbar */
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+  backdrop-filter: blur(6px) !important;
 }
+
 /* === MINIATURAS A LA IZQUIERDA === */
 /* .miniaturas {
   width: 20%;
