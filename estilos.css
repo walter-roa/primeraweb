@@ -103,7 +103,7 @@
 
 /* --- Contenido que hace scroll debajo del banner y nav --- */
 .contenido-scroll {
-  margin-top: 2400px; /* banner + nav */
+  margin-top: 250px; /* banner + nav */
   padding: 20px;
   height: calc(100vh - 220px);
   overflow-y: auto;
